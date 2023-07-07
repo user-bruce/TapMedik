@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/**************************SYNCFUSION SCHEDULE COMPONENT CSS****************************** */
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-schedule/styles/material.css';
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Open Sans
+}
+
+h2{
+  margin: 0px !important;
+}
+
+fieldset {
+  margin: 5px;
+  border: 0px solid black !important;
+}
+
+.save-button {
+  background-color: #043f40;
+  color: white;
+  margin: 0px 5px !important;
+}
+
+.cancel-button {
+  background-color: white;
+  color: #043f60;
+  border: 1px solid #043f60 !important;
+  margin: 0px 5px !important;
+}
+
+.form-actions{
+  margin: 15px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+p{
+  margin: 0px !important;
+}
+
+::ng-deep .mat-select-arrow{
+  color: #043f60 !important;
+}
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<div class="admission-charges-container">
+  <div class="admission-charges-inner-wrapper">
+    <div class="top-container">
+      <div class="top-left-container">
+        <img src="../../../../assets/biil_notification.png">
+        <div class="text-container">
+          <h2 class="title">Create your charges on the go!</h2>
+          <span class="description">Create your charges for your products and services all in one place</span>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-container">
+      <table mat-table [dataSource]="allCharges" class="mat-elevation-z8 all-charges-table">
+        <ng-container matColumnDef="dateCreated">
+          <th mat-header-cell *matHeaderCellDef> Date Created </th>
+          <td mat-cell *matCellDef="let element"> {{element.dateCreated}} </td>
+        </ng-container>
+        <ng-container matColumnDef="chargedItem">
+          <th mat-header-cell *matHeaderCellDef> Charged Service </th>
+          <td mat-cell *matCellDef="let element"> {{element.chargedItem}} </td>
+        </ng-container>
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description | limitString}} </td>
+        </ng-container>
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef> Status </th>
+          <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        </ng-container>
+        <ng-container matColumnDef="charge">
+          <th mat-header-cell *matHeaderCellDef> Charge </th>
+          <td mat-cell *matCellDef="let element"> {{element.charge}} </td>
+        </ng-container>
+        <ng-container matColumnDef="utilityCharge">
+          <th mat-header-cell *matHeaderCellDef> Utility Fees </th>
+          <td mat-cell *matCellDef="let element"> {{element.utilityCharge}} </td>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Action</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button aria-label="Click to search bill">
+              <mat-icon>info</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="Click to search bill">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="Click to search bill">
+              <mat-icon>trending_up</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+.main-component-wrapper{
+  position: fixed;
+  top: 65px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(222, 222, 222);
+}
+
+.main-component-inner-container{
+  padding: 0px 30px 10px 30px;
+  background-color: white;
+  height: 100%;
+}
+
+.dash-card-container{
+  margin-bottom: 20px;
+  width: 100%;
+  margin: 0px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-cards-main-title{
+  margin-left: 65px;
+  color: #043f60;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main-graphs-title{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-graphs-menu-title{
+  margin-left: 35px;
+  color: #043f60;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+.main-graphs-title mat-form-field{
+  color: white !important;
+}
+
+.main-graphs-container{
+  margin-top: 10px;
+  height: 60%;
+  padding-top: 20px;
+  background-color: #f1f1f1;
+}
+
+.graphs-menu-container{
+  margin-left: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graphs-menu-container a{
+  cursor: pointer;
+  color: #043f60;
+  margin: 0px 8px;
+}
+
+.dash-card-buttons-container, .dash-buttons-row{
+  background-color: #efefef;
+  color: #efefef;
+}
+
+.dash-card-buttons-container{
+  padding: 8px 10px;
+  margin: 4px 8px;
+}
+
+.dash-button{
+  margin: 4px 2px !important;
+  color: white;
+  background-color:#043f60;
+  border-radius: 2px;
+
+}
+

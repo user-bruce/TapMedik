@@ -1,0 +1,58 @@
+::ng-deep .mat-checkbox {
+  color: #043f60 !important;
+}
+
+hr{
+  width: 50% !important;
+}
+
+.report-item-container{
+  min-width: 550px;
+  margin: 15px 0px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.item-inner-container{
+  display: flex;
+  width: 100%;
+
+}
+
+.colored-sidebar{
+  background-color: #043f60;
+  width: 5px;
+}
+
+.report-details-container{
+  display: flex;
+  width: 100%;
+  padding: 6px 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attach-report-button{
+  background-color: #043f60;
+  color: white;
+}
+
+.generated-on-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.generated-on-title{
+  color: rgb(156, 155, 155);
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+button.clicked {
+  background-color: red; /* Set the desired color for the clicked state */
+  color: white; /* Set the text color for the clicked state */
+}
+
+div.clicked{
+  background-color: red; /* Set the desired color for the clicked state */
+  color: white;
+}

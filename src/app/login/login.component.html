@@ -1,0 +1,33 @@
+<div class="login-container">
+  <div class="login-container-inner">
+    <div class="logo-container">
+      <img src="../../../assets/tapmedik1.png"
+      alt="" class="login-screen-image">
+      <span class="login-title">
+        Login
+      </span>
+      <mat-slide-toggle class="custom-slider">Admin</mat-slide-toggle>
+    </div>
+    <div class="inputs-container">
+      <form class="login-form">
+        <mat-form-field class="login-full-width" style="text-align: center;">
+          <mat-icon matPrefix>person</mat-icon>
+          <mat-label>Enter Your Username/Email</mat-label>
+          <input matInput >
+        </mat-form-field>
+        <mat-form-field class="login-full-width" style="text-align: center;">
+          <mat-icon matPrefix>lock</mat-icon>
+          <mat-label>Enter Your Password</mat-label>
+          <input matInput >
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="actions-container">
+      <div class="login-button-container">
+        <button mat-raised-button class="signup-button login-action-button" (click)="goToSignup()">Signup</button>
+        <button mat-raised-button color="primary" class="login-button login-action-button" (click)="goToDashboard()">Login</button>
+      </div>
+      <a class="forgot-password-link" href=".">Forgot Password?</a>
+    </div>
+  </div>
+</div>

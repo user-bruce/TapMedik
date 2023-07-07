@@ -1,0 +1,142 @@
+<div class="room-item-container">
+  <div class="room-item-inner-container">
+    <div class="room-item-top-container">
+      <div class="registration-date-container">
+        <div class="date-day-container">
+          <span class="date-day-text registration-date-text">{{rxTime | date: 'd'}}</span>
+        </div>
+        <div class="month-and-year-container">
+          <span class="date-month-text">{{rxTime | date: 'MMM'}}</span>
+          <span class="date-year-text">{{rxTime | date: 'y'}}</span>
+        </div>
+        <div class="date-time-container">
+          <span class="date-time-text registration-date-text">{{rxTime | date: 'hh:mm:ss a'}}</span>
+        </div>
+      </div>
+      <div class="room-top-center">
+        <div class="example-button-container" matTooltip="Filter rooms">
+          <button class="room-center-button" mat-mini-fab [matMenuTriggerFor]="menu">
+            <mat-icon>sort</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Outrooms</button>
+            <button mat-menu-item>Inrooms</button>
+            <button mat-menu-item>Admitted</button>
+            <button mat-menu-item>Referred</button>
+          </mat-menu>
+        </div>
+        <div class="example-button-container" matTooltip="Refresh rooms room">
+          <button mat-mini-fab class="room-center-button">
+            <mat-icon>refresh</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Print rooms room">
+          <button mat-mini-fab class="room-center-button">
+            <mat-icon>print</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Export rooms room">
+          <button mat-mini-fab class="room-center-button">
+            <mat-icon>save_alt</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Share rooms room" class="room-center-button">
+          <button mat-mini-fab class="room-center-button">
+            <mat-icon>share</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="register-top-right">
+        <button class="room-item-action-button" matTooltip="Backup rooms" mat-stroked-button><mat-icon
+            class="bottom-icon">cloud_upload</mat-icon>&nbsp; Backup</button>
+        <button class="room-item-action-button" matTooltip="room settings" mat-stroked-button><mat-icon
+            class="bottom-icon">settings_applications</mat-icon>&nbsp; room settings</button>
+      </div>
+    </div>
+    <div class="room-item-body">
+      <div class="room-item-body-inner">
+        <div class="room-reg-form">
+          <form action="POST" class="room-form">
+            <fieldset>
+              <legend>
+                <mat-icon class="bottom-icon">local_hospital</mat-icon>
+                <h2>Room Details</h2>
+              </legend>
+              <div class="fieldset-controls-container">
+                <mat-form-field class="example-full-width">
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="First name">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Middle Name</mat-label>
+                  <input matInput placeholder="First name">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Surname</mat-label>
+                  <input matInput placeholder="First name">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>National ID</mat-label>
+                  <input matInput placeholder="First name">
+                </mat-form-field>
+                <mat-form-field class="example-full-width dob-form-control">
+                  <mat-label>Date of Birth</mat-label>
+                  <input matInput placeholder="Date of Birth" [matDatepicker]="picker">
+                  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <div class="space"></div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend class="equipment-legend">
+                <mat-icon class="bottom-icon">edit</mat-icon>
+                <h2>Room Equipment Details(Optional)</h2>
+                <button class="register-room-action-button save-button equipment-button" matTooltip="Add Equipment"
+                  mat-stroked-button><mat-icon class="add-room-icon">add</mat-icon>&nbsp;Add Another Item</button>
+              </legend>
+              <span class="equipment-description">
+                Keep track of your room assets.
+              </span>
+              <div class="chips-container">
+                <mat-chip-list aria-label="Fish selection">
+                  <mat-chip matBadgeColor="warn" class="chip-bg" matBadge="2" matBadgeOverlap="true">One fish</mat-chip>
+                  <mat-chip matBadge="4" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Two fish</mat-chip>
+                  <mat-chip matBadge="1" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Accent
+                    fish</mat-chip>
+                  <mat-chip matBadge="2" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Warn
+                    fish</mat-chip>
+                  <mat-chip matBadge="2" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">One fish</mat-chip>
+                  <mat-chip matBadge="4" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Two fish</mat-chip>
+                  <mat-chip matBadge="1" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Accent
+                    fish</mat-chip>
+                  <mat-chip matBadge="2" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Warn
+                    fish</mat-chip>
+                  <mat-chip matBadge="2" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">One fish</mat-chip>
+                  <mat-chip matBadge="4" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Two fish</mat-chip>
+                  <mat-chip matBadge="1" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Accent
+                    fish</mat-chip>
+                  <mat-chip matBadge="2" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Warn
+                    fish</mat-chip>
+                  <mat-chip matBadge="2" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">One fish</mat-chip>
+                  <mat-chip matBadge="4" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Two fish</mat-chip>
+                  <mat-chip matBadge="1" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Accent
+                    fish</mat-chip>
+                  <mat-chip matBadge="2" class="chip-bg" matBadgeOverlap="true" matBadgeColor="warn">Warn
+                    fish</mat-chip>
+                </mat-chip-list>
+                <div class="space"></div>
+              </div>
+            </fieldset>
+          </form>
+          <div class="form-actions">
+            <button class="register-room-action-button cancel-button" matTooltip="Clear and go to listing"
+              mat-stroked-button><mat-icon class="bottom-icon">not_interested</mat-icon>&nbsp; Cancel</button>
+            <button class="register-room-action-button save-button" matTooltip="Save a room"
+              mat-stroked-button><mat-icon class="bottom-icon">save</mat-icon>&nbsp;Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

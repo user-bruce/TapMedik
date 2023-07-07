@@ -1,0 +1,155 @@
+:host ::ng-deep .mat-card {
+  background-color: white;
+}
+
+.home-graphs-container {
+  margin: 0px 10px;
+  padding: 0px 4px !important;
+  align-items: center;
+}
+
+.home-graphs-wrapper {
+  display: flex;
+  width: 400px;
+  height: 420px;
+}
+
+.graph-wrapper-container {
+  background-color: white;
+  padding: 40px 20px 5px 20px;
+  border-radius: 4px;
+  height: 430px;
+  color: white;
+  margin: 0px 10px;
+}
+
+.comparisons-title{
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  color: grey;
+}
+
+.comparisons-container {
+  display: flex;
+  color: white;
+  margin: 15px 0px 0px 0px;
+  background-color: #043f60;
+  padding: 4px 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  border-radius: 4px;
+}
+
+.comparisons-inner-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.comparison-item {
+  margin: 0px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.comparison-item-down .comparison-item-value, .comparison-item-down .bottom-icon {
+  color: red;
+}
+
+.comparison-item-up .comparison-item-value, .comparison-item-up .bottom-icon {
+  color: #82cc15;
+}
+
+.comparison-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.comparison-item-value {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.stats-spacer{
+  width: 2px;
+  height: 25px;
+  margin: 0px 15px;
+  background-color: white;
+}
+
+.graph-title-text {
+  color: black;
+  margin: 0px 0px 25px 0px !important;
+  text-align: center;
+}
+
+.side-recent-chats {
+  color: black;
+}
+
+.all-graphs-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.graphs-seperator {
+  width: 10px;
+}
+
+
+.upcoming-appointments-container .upcoming-appointments-title {
+  color: black;
+}
+
+.upcoming-appointments-container .upcoming-appointments-table table {
+  min-width: 550px;
+  color: white !important;
+}
+
+th, td {
+  background-color: white;
+  color: black;
+}
+
+.upcoming-appointments-title {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.bold-header {
+  font-weight: 600;
+}
+
+.appointment-action-button {
+  border: none;
+  box-shadow: none !important;
+  background-color: inherit;
+}
+
+table {
+  color: black !important;
+  box-shadow: none !important;
+}
+
+.delete-appointment {
+  color: rgb(255, 17, 17)
+}
+
+.view-appointment {
+  color: #043f60;
+}
+
+.reschedule-appointment {
+  color: #043f60;
+}

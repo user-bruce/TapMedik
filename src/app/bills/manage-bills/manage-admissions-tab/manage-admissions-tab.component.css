@@ -1,0 +1,83 @@
+.admission-charges-inner-wrapper{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.admission-charges-list{
+  flex-grow: 1;
+  margin: 25px 35px;
+}
+
+.charges-table{
+  width: 100%;
+  background-color: white;
+  color: #043f60;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
+}
+
+th, td {
+  color: #043f60;
+  border-bottom: 0.2px solid rgb(194, 194, 194);
+}
+
+th{
+  font-weight: 600;
+ }
+
+::ng-deep .example-full-width{
+  min-width: 350px !important;
+  margin: 0px 12px;
+
+  .mat-input-element {
+    color: #043f60 !important;
+  }
+
+  .mat-form-field-label {
+    color: #043f60 !important;
+  }
+
+  .mat-form-field-underline {
+    background-color: #043f60 !important;
+  }
+
+  .mat-form-field-ripple {
+    background-color: #043f40 !important;
+  }
+
+  .mat-form-field-required-marker {
+    color: #043f40 !important;
+  }
+
+  .patients-table, .patients-table table {
+    min-width: 1500px !important;
+  }
+}
+
+::ng-deep .mat-form-field-infix{
+  color: #043f60;
+}
+
+.form-legend{
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.legend-icon{
+  margin-right: 15px;
+}
+
+.mat-select-custom {
+  color: #333 !important;
+}
+
+.mat-option-custom {
+  color: #333;
+}
+
+::ng-deep .mat-select-value{
+  color: #043f60;
+}
+
+
+

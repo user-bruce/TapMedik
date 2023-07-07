@@ -1,0 +1,81 @@
+<div class="bill-item-container">
+  <div class="bill-item-inner-container">
+    <div class="bill-item-top-container">
+      <div class="registration-date-container">
+        <div class="date-day-container">
+          <span class="date-day-text registration-date-text">{{rxTime | date: 'd'}}</span>
+        </div>
+        <div class="month-and-year-container">
+          <span class="date-month-text">{{rxTime | date: 'MMM'}}</span>
+          <span class="date-year-text">{{rxTime | date: 'y'}}</span>
+        </div>
+        <div class="date-time-container">
+          <span class="date-time-text registration-date-text">{{rxTime | date: 'hh:mm:ss a'}}</span>
+        </div>
+      </div>
+      <div class="bill-top-center">
+        <div class="example-button-container" matTooltip="Filter bills">
+          <button class="bill-center-button" mat-mini-fab [matMenuTriggerFor]="menu" >
+            <mat-icon>sort</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Outbills</button>
+            <button mat-menu-item>Inbills</button>
+            <button mat-menu-item>Admitted</button>
+            <button mat-menu-item>Referred</button>
+          </mat-menu>
+        </div>
+        <div class="example-button-container" matTooltip="Refresh bills bill">
+          <button mat-mini-fab class="bill-center-button">
+            <mat-icon>refresh</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Print bills bill">
+          <button mat-mini-fab class="bill-center-button">
+            <mat-icon>print</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Export bills bill">
+          <button mat-mini-fab class="bill-center-button">
+            <mat-icon>save_alt</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Share bills bill" class="bill-center-button">
+          <button mat-mini-fab class="bill-center-button">
+            <mat-icon>share</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="register-top-right">
+        <button class="bill-item-action-button" matTooltip="Backup bills" mat-stroked-button><mat-icon
+            class="bottom-icon">cloud_upload</mat-icon>&nbsp; Backup</button>
+        <button class="bill-item-action-button" matTooltip="bill settings" mat-stroked-button><mat-icon
+            class="bottom-icon">settings_applications</mat-icon>&nbsp; bill settings</button>
+      </div>
+    </div>
+    <div class="bill-item-body">
+      <div class="bill-item-body-inner">
+        <div class="bill-body-container">
+          <mat-tab-group>
+            <mat-tab label="All">
+              <app-manage-home-tab></app-manage-home-tab>
+            </mat-tab>
+            <mat-tab label="Appointment Charges">
+              <app-manage-appointments-tab></app-manage-appointments-tab>
+            </mat-tab>
+            <mat-tab label="Room Charges">
+              <app-manage-rooms-tab></app-manage-rooms-tab>
+            </mat-tab>
+            <mat-tab label="Referal Charges">
+              <app-manage-referals-tab></app-manage-referals-tab>
+            </mat-tab>
+            <mat-tab label="Admissions Charges">
+              <app-manage-admissions-tab></app-manage-admissions-tab>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

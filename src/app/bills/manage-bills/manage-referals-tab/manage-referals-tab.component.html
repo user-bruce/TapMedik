@@ -1,0 +1,87 @@
+<div class="referal-charges-container">
+  <div class="referal-charges-inner-wrapper">
+    <div class="referal-charges-list">
+      <div class="table-title-area">
+
+      </div>
+      <div class="table-container">
+        <table mat-table [dataSource]="referalCharges" class="mat-elevation-z8 charges-table">
+          <ng-container matColumnDef="dateCreated">
+            <th mat-header-cell *matHeaderCellDef> Date Created </th>
+            <td mat-cell *matCellDef="let element"> {{element.dateCreated}} </td>
+          </ng-container>
+          <ng-container matColumnDef="referalType">
+            <th mat-header-cell *matHeaderCellDef> referalType </th>
+            <td mat-cell *matCellDef="let element"> {{element.referalType}} </td>
+          </ng-container>
+          <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.description | limitString}} </td>
+          </ng-container>
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+          </ng-container>
+          <ng-container matColumnDef="charge">
+            <th mat-header-cell *matHeaderCellDef> Charge </th>
+            <td mat-cell *matCellDef="let element"> {{element.charge}} </td>
+          </ng-container>
+          <ng-container matColumnDef="utilityCharge">
+            <th mat-header-cell *matHeaderCellDef> Utility Fees </th>
+            <td mat-cell *matCellDef="let element"> {{element.utilityCharge}} </td>
+          </ng-container>
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Action</th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-icon-button aria-label="Click to search bill">
+                <mat-icon>info</mat-icon>
+              </button>
+              <button mat-icon-button aria-label="Click to search bill">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-icon-button aria-label="Click to search bill">
+                <mat-icon>trending_up</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </div>
+    <div class="referal-charges-form">
+      <div class="form-title">
+
+      </div>
+      <div class="form-container">
+        <fieldset>
+          <legend class="form-legend">
+            <h2>referal Charges Forms</h2>
+          </legend>
+          <div class="fieldset-controls-container">
+            <div class="spacer"></div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Basic Charge</mat-label>
+              <input matInput type="number" placeholder="Enter amount">
+                <mat-icon matPrefix>attach_money</mat-icon>
+            </mat-form-field>
+            <div class="spacer"></div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Utility Charges</mat-label>
+              <input matInput type="number" placeholder="Enter amount">
+                <mat-icon matPrefix>attach_money</mat-icon>
+            </mat-form-field>
+            <div class="spacer"></div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Description</mat-label>
+              <textarea matInput rows="6" placeholder="First name"></textarea>
+              <mat-icon matPrefix>edit</mat-icon>
+            </mat-form-field>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+
+

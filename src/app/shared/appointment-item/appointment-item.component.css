@@ -1,0 +1,42 @@
+.appointment-item-container{
+  display: flex;
+  background-color: rgb(204, 204, 204);
+  position: relative;
+  min-width: 340px;
+  height: 65px;
+  flex-grow: 1;
+  margin: 4px 0px;
+}
+
+.item-banner{
+  height: 100%;
+  width: 6px;
+  position: absolute;
+  left: 0;
+  background-color: yellowgreen;
+}
+
+.item-inner{
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center
+}
+
+.avatar{
+  width: 30px;
+  margin-right: 25px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.patient-name{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.appointment-date{
+  font-size: 11px;
+  margin-top: 6px;
+}

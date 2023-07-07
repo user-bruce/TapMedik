@@ -1,0 +1,106 @@
+<div class="report-item-container">
+  <div class="report-item-inner-container">
+    <div class="report-item-top-container">
+      <div class="registration-date-container">
+        <div class="date-day-container">
+          <span class="date-day-text registration-date-text">{{rxTime | date: 'd'}}</span>
+        </div>
+        <div class="month-and-year-container">
+          <span class="date-month-text">{{rxTime | date: 'MMM'}}</span>
+          <span class="date-year-text">{{rxTime | date: 'y'}}</span>
+        </div>
+        <div class="date-time-container">
+          <span class="date-time-text registration-date-text">{{rxTime | date: 'hh:mm:ss a'}}</span>
+        </div>
+      </div>
+      <div class="report-top-center">
+        <div class="example-button-container" matTooltip="Filter patients">
+          <button class="report-center-button" mat-mini-fab [matMenuTriggerFor]="menu" >
+            <mat-icon>sort</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Outpatients</button>
+            <button mat-menu-item>Inpatients</button>
+            <button mat-menu-item>Admitted</button>
+            <button mat-menu-item>Referred</button>
+          </mat-menu>
+        </div>
+        <div class="example-button-container" matTooltip="Refresh Patients Report">
+          <button mat-mini-fab class="report-center-button">
+            <mat-icon>refresh</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Print Patients Report">
+          <button mat-mini-fab class="report-center-button">
+            <mat-icon>print</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Export patients Report">
+          <button mat-mini-fab class="report-center-button">
+            <mat-icon>save_alt</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Share patients report" class="report-center-button">
+          <button mat-mini-fab class="report-center-button">
+            <mat-icon>share</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="register-top-right">
+        <button class="report-item-action-button" matTooltip="Backup Patients" mat-stroked-button><mat-icon
+            class="bottom-icon">cloud_upload</mat-icon>&nbsp; Backup</button>
+        <button class="report-item-action-button" matTooltip="Report settings" mat-stroked-button><mat-icon
+            class="bottom-icon">settings_applications</mat-icon>&nbsp; Report settings</button>
+      </div>
+    </div>
+    <div class="report-item-body">
+      <div class="report-item-body-inner">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+          <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef> Gender </th>
+            <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+          </ng-container>
+          <ng-container matColumnDef="dob">
+            <th mat-header-cell *matHeaderCellDef> D.O.B </th>
+            <td mat-cell *matCellDef="let element"> {{element.dob}} </td>
+          </ng-container>
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> National Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+          <ng-container matColumnDef="last_checkup">
+            <th mat-header-cell *matHeaderCellDef> Last Checkup</th>
+            <td mat-cell *matCellDef="let element"> {{element.last_checkup}} </td>
+          </ng-container>
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> Weight</th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+          </ng-container>
+          <ng-container matColumnDef="disease">
+            <th mat-header-cell *matHeaderCellDef> Disease</th>
+            <td mat-cell *matCellDef="let element"> {{element.disease}} </td>
+          </ng-container>
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef> Registration Date</th>
+            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+          </ng-container>
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status</th>
+            <td mat-cell *matCellDef="let element">
+              <div class="status-style-wrapper">
+                {{element.status}}
+              </div>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

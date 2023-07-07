@@ -1,0 +1,164 @@
+:host ::ng-deep .mat-sidenav-container{
+  border: none;
+}
+
+:host ::ng-deep .mat-sidenav{
+  border: none;
+}
+
+.top-bar-icons{
+  color: #043f60;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: none;
+}
+
+:host ::ng-deep .mat-drawer-inner-container{
+  background-color: white !important;
+  border: none;
+}
+
+.mat-menu-panel {
+  background-color: #ffffff;
+}
+
+:host ::ng-deep .mat-expansion-panel{
+  margin: 15px 0px;
+  background-color: #043f60;
+  box-shadow: none;
+  border: none;
+}
+
+:host ::ng-deep .mat-expansion-panel-header{
+  padding-left: 0px !important;
+  border: none;
+}
+
+:host ::ng-deep .mat-nav-list{
+  height: 99%;
+}
+
+button{
+  border: none;
+  background-color: white;
+  outline: 0;
+}
+
+.mat-badge-content {
+  background: #043f60;
+  color: white;
+}
+
+.fixed-link{
+  padding-left: 35px;
+}
+
+.toolbar{
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+}
+
+.toolbar-logo{
+  height: 32px;
+  width: 45px;
+}
+
+.toolbar-row{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-container{
+  display: flex;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.toolbar-logo-container{
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.profile-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 25px;
+}
+
+.profile-icon{
+  width: 25px;
+  cursor: pointer;
+  height: 25px;
+  margin-left: 15px;
+}
+
+.logged-in-user{
+  color: #043f60;
+  font-size: 12px;
+  margin-right: 25px;
+}
+
+.nav-menu-toggle{
+  color: black;
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+.app-name{
+  margin-left: 15px;
+  color: black;
+}
+
+.sidenav-container{
+  flex: 1;
+}
+
+.nav-list{
+  background-color: #043f60;
+
+}
+
+.nav-list-item{
+  color: green;
+  margin: 15px 0px;
+  width: 180px;
+}
+
+.list-item-inner{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.nav-icon{
+  width: 30px;
+  height: 30px;
+}
+
+.nav-item-text{
+  color: white;
+}
+
+.spacer{
+  height: 200px;
+}
+
+
+

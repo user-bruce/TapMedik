@@ -1,0 +1,17 @@
+<div class="report-item-container">
+  <div class="item-inner-container">
+    <div class="colored-sidebar" [class.clicked]="isClicked">
+    </div>
+    <div class="report-details-container">
+      <div class="generated-on-container">
+        <span class="generated-on-title">GENERATED ON</span>
+        <span class="generated-on">04 June 2023</span>
+      </div>
+      <div class="attach-container">
+        <button mat-mini-fab class="attach-report-button" [class.clicked]="isClicked" matTooltip="Attach/Detach a patient report" (click)="changeIcon()" aria-label="Attach patient record">
+          <mat-icon>{{ icon }}</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

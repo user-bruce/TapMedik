@@ -1,0 +1,12 @@
+.logo-container{
+  padding-top: 100px;
+  padding-left: 35px;
+  padding-right: 35px;
+  height: 110px;
+  background-color: white;
+}
+
+.logo-image{
+  width: 140px;
+  height: 60px;
+}

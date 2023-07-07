@@ -1,0 +1,68 @@
+<div class="register-schedule-container">
+  <div class="register-schedule-inner-container">
+    <div class="register-schedule-top-container">
+      <div class="registration-date-container">
+        <div class="date-day-container">
+          <span class="date-day-text registration-date-text">{{rxTime | date: 'd'}}</span>
+        </div>
+        <div class="month-and-year-container">
+          <span class="date-month-text">{{rxTime | date: 'MMM'}}</span>
+          <span class="date-year-text">{{rxTime | date: 'y'}}</span>
+        </div>
+        <div class="date-time-container">
+          <span class="date-time-text registration-date-text">{{rxTime | date: 'hh:mm:ss a'}}</span>
+        </div>
+      </div>
+      <div class="register-top-right">
+        <button class="register-schedule-action-button" matTooltip="Create a new schedule" mat-stroked-button><mat-icon
+            class="bottom-icon">arrow_upward</mat-icon>&nbsp; Upload schedule</button>
+        <button class="register-schedule-action-button" matTooltip="Create a new schedule" mat-stroked-button><mat-icon
+            class="bottom-icon">cloud_upload</mat-icon>&nbsp; Bulk upload</button>
+        <button class="register-schedule-action-button" matTooltip="Create a new schedule" mat-stroked-button><mat-icon
+            class="bottom-icon">settings_applications</mat-icon>&nbsp; Schedule settings</button>
+      </div>
+    </div>
+    <div class="register-schedule-body">
+      <div class="register-schedule-body-inner">
+        <div class="schedule-reg-form">
+          <div class="shedule-container">
+            <div class="schedule-inner-row">
+              <div class="upcoming-container appointment-items-container">
+                <div class="items-container-title">
+                  <p class="container-title-text">UPCOMING</p>
+                </div>
+                <div class="items-container-body" cdkDropList id="upcomingAppointments" (cdkDropListDropped)="onDrop($event)" [cdkDropListData]="upcomingAppointments" cdkDropListConnectedTo="cancelledAppointments">
+                  <app-appointment-item *ngFor="let app of upcomingAppointments" [appointment]="app"></app-appointment-item>
+                </div>
+              </div>
+              <div class="cancelled-container appointment-items-container">
+                <div class="items-container-title">
+                  <p class="container-title-text">CANCELLED</p>
+                </div>
+                <div class="items-container-body" cdkDropList id="cancelledAppointments" (cdkDropListDropped)="onDrop($event)" [cdkDropListData]="cancelledAppointments" cdkDropListConnectedTo="overdueAppointments">
+                  <app-appointment-item *ngFor="let app of cancelledAppointments" [appointment]="app"></app-appointment-item>
+                </div>
+              </div>
+              <div class="overdue-container appointment-items-container">
+                <div class="items-container-title">
+                  <p class="container-title-text">OVERDUE</p>
+                </div>
+                <div class="items-container-body" cdkDropList id="overdueAppointments" (cdkDropListDropped)="onDrop($event)" [cdkDropListData]="overdueAppointments" cdkDropListConnectedTo="doneAppointments">
+                  <app-appointment-item *ngFor="let app of overdueAppointments" [appointment]="app"></app-appointment-item>
+                </div>
+              </div>
+              <div class="done-container appointment-items-container">
+                <div class="items-container-title">
+                  <p class="container-title-text">DONE</p>
+                </div>
+                <div class="items-container-body" cdkDropList id="doneAppointments" (cdkDropListDropped)="onDrop($event)" [cdkDropListData]="doneAppointments"cdkDropListConnectedTo="upcomingAppointments">
+                  <app-appointment-item *ngFor="let app of doneAppointments" [appointment]="app"></app-appointment-item>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

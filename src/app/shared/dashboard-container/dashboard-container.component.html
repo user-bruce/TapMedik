@@ -1,0 +1,43 @@
+<div class="main-component-wrapper">
+  <div class="main-component-inner-container">
+    <div class="dash-cards-container">
+      <div class="dash-cards-main-title">
+        Recent records
+      </div>
+      <app-dash-card></app-dash-card>
+    </div>
+    <div class="main-graphs-container">
+      <div class="main-graphs-title">
+        <span class="main-graphs-menu-title">Patient Statistics</span>
+        <div class="graphs-menu-container">
+          <a>
+            <mat-icon [matMenuTriggerFor]="menu" class="bottom-icon"
+              matTooltip="Filter graphs in dropdown">filter_list</mat-icon>
+          </a>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Patient Statistics</button>
+            <button mat-menu-item>Medical Dispensation</button>
+            <button mat-menu-item>Disease Trends</button>
+          </mat-menu>
+          <a>
+            <mat-icon class="bottom-icon" matTooltip="Refresh graphs">refresh</mat-icon>
+          </a>
+          <a>
+            <mat-icon class="bottom-icon" matTooltip="Export graphs">save</mat-icon>
+          </a>
+        </div>
+        <div class="dash-card-buttons-container">
+          <div class="dash-buttons-row">
+            <button class="add-customer dash-button" matTooltip="Add new patient" mat-stroked-button><mat-icon
+                class="bottom-icon">person_add</mat-icon>&nbsp; Add patient</button>
+            <button class="create-schedule dash-button" matTooltip="Create a new schedule" mat-stroked-button><mat-icon
+                class="bottom-icon">timeline</mat-icon>&nbsp; Create shedule</button>
+            <button class="create-appointment dash-button" matTooltip="Create a new appointment"
+              mat-stroked-button><mat-icon class="bottom-icon">timer</mat-icon>&nbsp; Create appointment</button>
+          </div>
+        </div>
+      </div>
+      <app-home-graphs></app-home-graphs>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,117 @@
+<div class="user-item-container">
+  <div class="user-item-inner-container">
+    <div class="user-item-top-container">
+      <div class="registration-date-container">
+        <div class="date-day-container">
+          <span class="date-day-text registration-date-text">{{rxTime | date: 'd'}}</span>
+        </div>
+        <div class="month-and-year-container">
+          <span class="date-month-text">{{rxTime | date: 'MMM'}}</span>
+          <span class="date-year-text">{{rxTime | date: 'y'}}</span>
+        </div>
+        <div class="date-time-container">
+          <span class="date-time-text registration-date-text">{{rxTime | date: 'hh:mm:ss a'}}</span>
+        </div>
+      </div>
+      <div class="user-top-center">
+        <div class="example-button-container" matTooltip="Filter users">
+          <button class="user-center-button" mat-mini-fab [matMenuTriggerFor]="menu" >
+            <mat-icon>sort</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Outusers</button>
+            <button mat-menu-item>Inusers</button>
+            <button mat-menu-item>Admitted</button>
+            <button mat-menu-item>Referred</button>
+          </mat-menu>
+        </div>
+        <div class="example-button-container" matTooltip="Refresh users user">
+          <button mat-mini-fab class="user-center-button">
+            <mat-icon>refresh</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Print users user">
+          <button mat-mini-fab class="user-center-button">
+            <mat-icon>print</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Export users user">
+          <button mat-mini-fab class="user-center-button">
+            <mat-icon>save_alt</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Share users user" class="user-center-button">
+          <button mat-mini-fab class="user-center-button">
+            <mat-icon>share</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="register-top-right">
+        <button class="user-item-action-button" matTooltip="Backup users" mat-stroked-button><mat-icon
+            class="bottom-icon">cloud_upload</mat-icon>&nbsp; Backup</button>
+        <button class="user-item-action-button" matTooltip="user settings" mat-stroked-button><mat-icon
+            class="bottom-icon">settings_applications</mat-icon>&nbsp; user settings</button>
+      </div>
+    </div>
+    <div class="user-item-body">
+      <div class="user-item-body-inner">
+        <div class="user-reg-form">
+          <form action="POST" class="user-form">
+            <fieldset>
+              <legend>
+                <mat-icon class="bottom-icon">receipt</mat-icon>
+                <h2>User General Details</h2>
+              </legend>
+              <div class="fieldset-controls-container">
+                <mat-form-field class="example-full-width">
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="First name">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Surname</mat-label>
+                  <input matInput placeholder="First name">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>User Role</mat-label>
+                  <mat-select>
+                    <mat-option>Option 1</mat-option>
+                    <mat-option>Option 1</mat-option>
+                    <mat-option>Option 1</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>National ID</mat-label>
+                  <input matInput placeholder="First name">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Email</mat-label>
+                  <input matInput placeholder="Email">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Phone Number</mat-label>
+                  <input matInput placeholder="First name">
+                </mat-form-field>
+                <mat-form-field class="example-full-width dob-form-control">
+                  <mat-label>Date of Birth</mat-label>
+                  <input matInput placeholder="Date of Birth" [matDatepicker]="picker">
+                  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <div class="space"></div>
+              </div>
+            </fieldset>
+          </form>
+          <div class="form-actions">
+            <button class="register-user-action-button cancel-button" matTooltip="Clear and go to listing"
+              mat-stroked-button><mat-icon class="bottom-icon">not_interested</mat-icon>&nbsp; Cancel</button>
+            <button class="register-user-action-button save-button" matTooltip="Save a user"
+              mat-stroked-button><mat-icon class="bottom-icon">save</mat-icon>&nbsp;Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

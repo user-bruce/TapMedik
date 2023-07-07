@@ -1,0 +1,14 @@
+<div class="appointment-item-container" cdkDrag>
+  <div class="item-banner"></div>
+  <div class="item-inner">
+    <div class="avatar"></div>
+    <div class="appointment-details">
+      <span class="patient-name">
+        {{appointment ? appointment.name : '-'}}
+      </span>
+      <div class="appointment-date">
+        {{appointment ? appointment.date : '-'}}
+      </div>
+    </div>
+  </div>
+</div>

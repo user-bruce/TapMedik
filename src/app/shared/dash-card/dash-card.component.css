@@ -1,0 +1,106 @@
+.dash-card-row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #efefef;
+  padding-top: 15px;
+  flex-wrap: wrap;
+}
+
+
+.color-red{
+  background-color: red;
+}
+
+.text-color-red{
+  color: red;
+}
+
+.color-orange{
+  background-color: orange;
+}
+
+.text-color-orange{
+  color: orange;
+}
+
+.color-blue{
+  background-color: blue;
+}
+
+.text-color-blue{
+  color: blue;
+}
+
+.color-purple{
+  background-color: purple;
+}
+
+.text-color-purple{
+  color: purple;
+}
+
+.default-color{
+  background-color: green;
+}
+
+.text-color-default{
+  color: green;
+}
+
+.dash-main-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #043f60;
+  width: 190px;
+  padding: 8px 18px;
+  margin: 4px 18px 25px 18px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.side-color{
+  position: absolute;
+  left: 0;
+  height: 100%;
+  top: 0;
+  width: 4px;
+  margin-bottom: 25px;
+}
+
+.dash-card-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-content-container{
+  font-size: 28px;
+}
+
+.mat-icon-size {
+  font-size: 45px;
+  height: 50px;
+  width: 50px;
+}
+
+.left-content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-content-container .left-content-value{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.left-content-container .left-content-title{
+  margin-top: 8px;
+  font-size: 11px;
+}

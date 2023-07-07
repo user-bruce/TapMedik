@@ -1,0 +1,134 @@
+<div class="referal-item-container">
+  <div class="referal-item-inner-container">
+    <div class="referal-item-top-container">
+      <div class="registration-date-container">
+        <div class="date-day-container">
+          <span class="date-day-text registration-date-text">{{rxTime | date: 'd'}}</span>
+        </div>
+        <div class="month-and-year-container">
+          <span class="date-month-text">{{rxTime | date: 'MMM'}}</span>
+          <span class="date-year-text">{{rxTime | date: 'y'}}</span>
+        </div>
+        <div class="date-time-container">
+          <span class="date-time-text registration-date-text">{{rxTime | date: 'hh:mm:ss a'}}</span>
+        </div>
+      </div>
+      <div class="referal-top-center">
+        <div class="example-button-container" matTooltip="Filter referals">
+          <button class="referal-center-button" mat-mini-fab [matMenuTriggerFor]="menu" >
+            <mat-icon>sort</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Outreferals</button>
+            <button mat-menu-item>Inreferals</button>
+            <button mat-menu-item>Admitted</button>
+            <button mat-menu-item>Referred</button>
+          </mat-menu>
+        </div>
+        <div class="example-button-container" matTooltip="Refresh referals referal">
+          <button mat-mini-fab class="referal-center-button">
+            <mat-icon>refresh</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Print referals referal">
+          <button mat-mini-fab class="referal-center-button">
+            <mat-icon>print</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Export referals referal">
+          <button mat-mini-fab class="referal-center-button">
+            <mat-icon>save_alt</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container" matTooltip="Share referals referal" class="referal-center-button">
+          <button mat-mini-fab class="referal-center-button">
+            <mat-icon>share</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="register-top-right">
+        <button class="referal-item-action-button" matTooltip="Backup referals" mat-stroked-button><mat-icon
+            class="bottom-icon">cloud_upload</mat-icon>&nbsp; Backup</button>
+        <button class="referal-item-action-button" matTooltip="referal settings" mat-stroked-button><mat-icon
+            class="bottom-icon">settings_applications</mat-icon>&nbsp; referal settings</button>
+      </div>
+    </div>
+    <div class="referal-item-body">
+      <div class="referal-item-body-inner">
+        <div class="referal-reg-form">
+          <form action="POST" class="referal-form">
+            <fieldset class="patient-referal-details">
+              <legend>
+                <mat-icon class="form-icon">receipt</mat-icon>
+                <h2>Referal General Details</h2>
+              </legend>
+              <div class="fieldset-controls-container">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Select Patient</mat-label>
+                  <mat-select>
+                    <mat-option>Hie</mat-option>
+                    <mat-option>Howdy</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Select Destination Health Center</mat-label>
+                  <mat-select>
+                    <mat-option>Hie</mat-option>
+                    <mat-option>Howdy</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Select Referal Specialist</mat-label>
+                  <mat-select>
+                    <mat-option>Hie</mat-option>
+                    <mat-option>Howdy</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <div class="full-example-width own-transportation">
+                  <mat-slide-toggle>Requires Ambulance?</mat-slide-toggle>
+                </div>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Reason for referral</mat-label>
+                  <textarea rows="5" draggable="false" matInput placeholder="Why are you transferring the patient?"></textarea>
+                </mat-form-field>
+                <div class="spacer"></div>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Additional Note (Optional)</mat-label>
+                  <input matInput placeholder="Additional Note">
+                </mat-form-field>
+              </div>
+            </fieldset>
+            <fieldset class="patient-referal-details">
+              <legend>
+                <mat-icon class="form-icon">receipt</mat-icon>
+                <h2>Attach Patient Reports(Optional)</h2>
+                <div class="attach-report-actions">
+                  <button class="referal-item-action-button" matTooltip="referal settings" mat-stroked-button><mat-icon
+                      class="bottom-icon">arrow_upward</mat-icon>&nbsp; Upload Excel</button>
+                </div>
+              </legend>
+              <hr/>
+              <div class="fieldset-controls-container">
+                <mat-list role="list">
+                  <app-patient-report-item></app-patient-report-item>
+                  <app-patient-report-item></app-patient-report-item>
+                  <app-patient-report-item></app-patient-report-item>
+                </mat-list>
+
+              </div>
+            </fieldset>
+          </form>
+          <div class="form-actions">
+            <button class="register-referal-action-button cancel-button" matTooltip="Clear and go to listing"
+              mat-stroked-button><mat-icon class="bottom-icon">not_interested</mat-icon>&nbsp; Cancel</button>
+            <button class="register-referal-action-button save-button" matTooltip="Save a referal"
+              mat-stroked-button><mat-icon class="bottom-icon">save</mat-icon>&nbsp;Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

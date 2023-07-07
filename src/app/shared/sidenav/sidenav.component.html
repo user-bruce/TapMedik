@@ -1,0 +1,236 @@
+<div class="container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar class="toolbar">
+    <div class="toolbar-row">
+      <div class="menu-container">
+        <div class="toolbar-logo-container" (click)="snav.toggle()">
+          <mat-icon class="nav-menu-toggle">menu</mat-icon>
+        </div>
+      </div>
+      <div class="profile-row">
+        <span class="logged-in-user">
+          Logged in as Bruce Chimoyo
+        </span>
+        <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+          <mat-icon class="top-bar-icons">person</mat-icon>
+        </button>
+        <mat-menu #profileMenu>
+          <mat-card>
+
+          </mat-card>
+        </mat-menu>
+        <button mat-icon-button>
+          <mat-icon class="top-bar-icons" matBadge="2" matBadgeColor="warn">notifications_active</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list class="nav-list">
+        <div class="logo">
+          <!-- <app-logo-container></app-logo-container> -->
+          <div class="spacer"></div>
+        </div>
+        <a mat-list-item routerLink="." class="nav-list-item fixed-link">
+          <div class="list-item-inner">
+            <img src="../../../assets/DASHBOARD.png" alt="" class="nav-icon">
+            <span class="nav-item-text">Dashboard</span>
+          </div>
+        </a>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <a mat-list-item class="nav-list-item">
+                <div class="list-item-inner">
+                  <img src="../../../assets/PATIENT.png" alt="" class="nav-icon">
+                  <span class="nav-item-text">My Patients</span>
+                </div>
+              </a>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a mat-list-item routerLink="patients/search" class="nav-list-item">
+            <div class="list-item-inner">
+              <img src="../../../assets/PATIENT.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Search</span>
+            </div>
+          </a>
+          <a mat-list-item routerLink="patients/register" class="nav-list-item">
+            <div class="list-item-inner">
+              <img src="../../../assets/PATIENT.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Register</span>
+            </div>
+          </a>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <a mat-list-item class="nav-list-item">
+                <div class="list-item-inner">
+                  <img src="../../../assets/APPOINTMENT.png" alt="" class="nav-icon">
+                  <span class="nav-item-text">Appointments</span>
+                </div>
+              </a>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a mat-list-item routerLink="appointments/search" class="nav-list-item">
+            <div class="list-item-inner">
+              <img src="../../../assets/APPOINTMENT.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Search</span>
+            </div>
+          </a>
+          <a mat-list-item routerLink="appointments/schedule" class="nav-list-item">
+            <div class="list-item-inner">
+              <img src="../../../assets/APPOINTMENT.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Schedule</span>
+            </div>
+          </a>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <a mat-list-item class="nav-list-item">
+                <div class="list-item-inner">
+                  <img src="../../../assets/REPORT.png" alt="" class="nav-icon">
+                  <span class="nav-item-text">Reports</span>
+                </div>
+              </a>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a mat-list-item  class="nav-list-item" routerLink="patient-reports">
+            <div class="list-item-inner">
+              <img src="../../../assets/PATIENT.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Patients</span>
+            </div>
+          </a>
+
+          <a mat-list-item class="nav-list-item" routerLink="room-reports">
+            <div class="list-item-inner">
+              <img src="../../../assets/ROOM.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Rooms</span>
+            </div>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="appointment-reports">
+            <div class="list-item-inner">
+              <img src="../../../assets/APPOINTMENT.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Appointments</span>
+            </div>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="bill-reports">
+            <div class="list-item-inner">
+              <img src="../../../assets/BILL.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Bills</span>
+            </div>
+          </a>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <a mat-list-item class="nav-list-item">
+                <div class="list-item-inner">
+                  <img src="../../../assets/BILL.png" alt="" class="nav-icon">
+                  <span class="nav-item-text">Bills</span>
+                </div>
+              </a>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a mat-list-item class="nav-list-item" routerLink="bills/search">
+            <div class="list-item-inner">
+              <img src="../../../assets/BILL.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Search</span>
+            </div>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="bills/manage">
+            <div class="list-item-inner">
+              <img src="../../../assets/BILL.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Manage</span>
+            </div>
+          </a>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <a mat-list-item class="nav-list-item">
+                <div class="list-item-inner">
+                  <img src="../../../assets/ROOM.png" alt="" class="nav-icon">
+                  <span class="nav-item-text">Rooms</span>
+                </div>
+              </a>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a mat-list-item class="nav-list-item" routerLink="rooms/search">
+            <div class="list-item-inner">
+              <img src="../../../assets/ROOM.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Search</span>
+            </div>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="rooms/add">
+            <div class="list-item-inner">
+              <img src="../../../assets/ROOM.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Add New</span>
+            </div>
+          </a>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <a mat-list-item class="nav-list-item">
+                <div class="list-item-inner">
+                  <img src="../../../assets/REFERRAL.png" alt="" class="nav-icon">
+                  <span class="nav-item-text">Referrals</span>
+                </div>
+              </a>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a mat-list-item class="nav-list-item" routerLink="referals/search">
+            <div class="list-item-inner">
+              <img src="../../../assets/REFERRAL.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Search</span>
+            </div>
+          </a>
+          <a mat-list-item class="nav-list-item" routerLink="referals/add">
+            <div class="list-item-inner">
+              <img src="../../../assets/REFERRAL.png" alt="" class="nav-icon">
+              <span class="nav-item-text">New Referral</span>
+            </div>
+          </a>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <a mat-list-item class="nav-list-item">
+                <div class="list-item-inner">
+                  <img src="../../../assets/APPOINTMENT.png" alt="" class="nav-icon">
+                  <span class="nav-item-text">Users</span>
+                </div>
+              </a>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a mat-list-item routerLink="users/search" class="nav-list-item">
+            <div class="list-item-inner">
+              <img src="../../../assets/APPOINTMENT.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Search</span>
+            </div>
+          </a>
+          <a mat-list-item routerLink="users/create" class="nav-list-item">
+            <div class="list-item-inner">
+              <img src="../../../assets/APPOINTMENT.png" alt="" class="nav-icon">
+              <span class="nav-item-text">Add New User</span>
+            </div>
+          </a>
+          <a mat-list-item routerLink="users/create" class="nav-list-item">
+            <div class="list-item-inner">
+              <img src="../../../assets/APPOINTMENT.png" alt="" class="nav-icon">
+              <span class="nav-item-text">User Roles</span>
+            </div>
+          </a>
+        </mat-expansion-panel>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <app-main-component></app-main-component>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
